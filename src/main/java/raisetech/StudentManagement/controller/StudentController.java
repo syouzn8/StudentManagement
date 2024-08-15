@@ -36,24 +36,26 @@ public class StudentController {
   }
 
   @GetMapping("/studentsCourseList")
-  public List<StudentsCourses> getStudentsCourseList(){
+  public List<StudentsCourses> getStudentsCourseList() {
     return service.searchStudentsCourseList();
   }
 
   @GetMapping("/newStudent")
-  public String newStudent(Model model){
-    model.addAttribute("studentDetail",new StudentDetail());
+  public String newStudent(Model model) {
+    model.addAttribute("studentDetail", new StudentDetail());
     return "registerStudent";
   }
 
 
   @PostMapping("/registerStudent")
-  public String registerStudent(@ModelAttribute StudentDetail studentDetail , BindingResult result) {
-    if(result.hasErrors()){
+  public String registerStudent(@ModelAttribute StudentDetail studentDetail, BindingResult result) {
+    if (result.hasErrors()) {
       return "registerStudent";
     }
 
+    Student student = studentDetail.getStudent();
 
+    StudentService.registerStudent(student);
 
     return "redirect:/studentList";
   }

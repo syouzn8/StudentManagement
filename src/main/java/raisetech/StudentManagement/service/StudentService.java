@@ -26,8 +26,8 @@ public class StudentService {
     return repository.searchStudentsCourses();
   }
 
-public static void registerStudent(Student student){
-  repository.insert(student);
-}
+  public static void registerStudent(Student student) {
+    repository.insert(student);
+  }
 
 }

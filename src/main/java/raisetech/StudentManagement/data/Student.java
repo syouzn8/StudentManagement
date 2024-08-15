@@ -98,4 +98,5 @@ public class Student {
   public void setDeleted(boolean deleted) {
     isDeleted = deleted;
   }
+
 }
