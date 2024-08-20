@@ -2,10 +2,10 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>受講生登録</title>
+  <title>受講生更新</title>
 </head>
 <body>
-<h1>受講生登録</h1>
+<h1>受講生更新</h1>
 <form th:action="@{/registerStudent}" th:object="${studentDetail}" method="post">
   <div>
     <label for="name">名前:</label>
@@ -43,11 +43,12 @@
     <label for="courseName">受講コース名：</label>
     <input type="text" id="courseName" th:id="studentCourse.__${stat.index}__.courseName" th:field="*{studentsCourses[__${stat.index}__].courseName}" />
   </div>
-    <div>
+  <div>
     <button type="submit">登録</button>
-    </div>
+  </div>
 
 </form>
 
 </body>
 </html>
+
