@@ -17,6 +17,4 @@ public class Student {
   private String furigana;
   private String remark;
   private boolean isDeleted;
-
-
 }

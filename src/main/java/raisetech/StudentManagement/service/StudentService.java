@@ -27,10 +27,14 @@ public class StudentService {
     return repository.searchStudentsCourses();
   }
 
+
   @Transactional
   public static void registerStudent(Student student) {
     repository.insert(student);
   }
+
+
+
   //TODOコース情報を書く
 
 }
