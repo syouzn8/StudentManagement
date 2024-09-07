@@ -45,7 +45,7 @@
   </div>
   <div>
     <label for="isDeleted">キャンセル:</label>
-    <input type="checkbox" id="isDeleted" th:field="*{student.Deleted}"  />
+    <input type="checkbox" id="isDeleted" th:field="*{student.deleted}"  />
   </div>
   <div th:each="cours, stat : *{studentsCourses}">
     <label for="studentCourseId"
@@ -59,7 +59,7 @@
            th:field="*{studentsCourses[__${stat.index}__].coursName}" />
   </div>
   <button type="submit">更新</button>
-  </div>
+
 
 </form>
 
